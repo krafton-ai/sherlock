@@ -1,0 +1,1 @@
+The game has started. You are shown a computer screen with a program called LOGIC Database open. It has the word 'MURDER' typed in the search bar, which prompts the user to "Enter query to access archived footage."
