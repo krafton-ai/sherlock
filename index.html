@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+
+<title>SHERLOCK: Unlocking Mysteries in Her Story using GPT-4</title>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21408087-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-21408087-2');
+</script>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" crossorigin="anonymous">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<style>
+    /* greek-ext */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+    }
+
+    /* greek */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) format('woff2');
+        unicode-range: U+0370-03FF;
+    }
+
+    /* latin-ext */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* greek-ext */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) format('woff2');
+        unicode-range: U+1F00-1FFF;
+    }
+
+    /* greek */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) format('woff2');
+        unicode-range: U+0370-03FF;
+    }
+
+    /* latin-ext */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+    }
+
+    /* latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<body>
+    <div class="container">
+        <div class="row mb-2 mt-4" id="paper-title">
+            <h1 class="col-md-12 text-center">
+                SHERLOCK
+            </h1>
+            <h3 class="col-md-12 text-center">
+                Unlocking Mysteries in Her Story using GPT-4
+            </h3>
+            <h3 class="col-md-12 text-center">
+                <small><a href="https://github.com/krafton-ai">KRAFTON AI</a></small>
+            </h3>
+        </div>
+
+        <div class="row mb-2" id="links">
+            <div class="mx-auto">
+                <ul class="nav">
+<!--                     <li class="nav-item text-center">
+                        <a href="https://arxiv.org/abs/2112.05131" class="nav-link" title="Temp link">
+                            <svg style="width:48px;height:48px" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M16 0H8C6.9 0 6 .9 6 2V18C6 19.1 6.9 20 8 20H20C21.1 20 22 19.1 22 18V6L16 0M20 18H8V2H15V7H20V18M4 4V22H20V24H4C2.9 24 2 23.1 2 22V4H4M10 10V12H18V10H10M10 14V16H15V14H10Z" />
+                            </svg><br>
+                            Paper
+                        </a> -->
+                    <li class="nav-item text-center">
+                        <a href="https://github.com/sxyu/svox2" class="nav-link">
+                            <svg style="width:48px;height:48px" viewBox="0 0 65 65">
+                                <path fill="currentColor" d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z" />
+                            </svg>
+                            <br>
+                            Code
+                        </a>
+                </ul>
+            </div>
+        </div>
+        <div class="row mb-3 pt-2">
+            <div class="col-md-8 mx-auto">
+                <p class="text-justify mt-2 pt-3">
+                    We present <b>Sherlock</b>, an innovative approach that leverages the capabilities of large language models (LLM) to successfully navigate the intricate interactive video game, <em><a href="https://www.herstorygame.com/">Her Story</a></em>.
+                </p>
+                <!--<div class="embed-responsive embed-responsive-16by9 pb-3">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n31K7Kv36B4" frameborder="0" allow="accelerometer; autoplay muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>-->
+				<div style="text-align: center;">
+					<video src="video/test.mp4" controls> </video>
+				</div>
+                <p class="text-justify mt-2 pt-3">
+                    Requiring strong logical deduction skills and long-term planning for each subsequent action, Her Story poses unique challenges for an AI. The game's ambiguous final goal contributes to its complexity; we define one version of "solving" the game as triggering the chit-chat icon, which grants access to the end sequence. Sherlock successfully navigates these challenges and solves Her Story within 204 actions, where each action corresponds to either a 'search keyword' command or a 'play video' command. 
+                    <span class="line-spacing"></span><br>
+
+                    To our knowledge, this represents the first attempt to utilize such a complex mystery game as a testing ground for game-playing AI. Notably, our techniques diverge from the typical use of reinforcement learning (RL), which often requires significant resources and intricate reward design to function optimally. Instead, we employ a frozen LLM (namely GPT-4), applying it beginning to end without any additional training. The distinct advantage of our <b>no-RL, no-gradient</b> approach lies in its simplicity and efficiency, particularly for the game <em>Her Story</em> where designing and managing rewards is a challenging task due to its the ambiguous objective. This work thus provides an insightful study of how LLMs can be utilized effectively to solve complex tasks without relying on training and simply employing modularized LLM components, opening new avenues for smarter game AI.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3 pt-1">
+            <div class="col-md-8 mx-auto">
+                <h4>Game Description</h4>
+                <p>
+                    <em>Her Story</em> is a interactive video game based on a non-linear narrative structure. The mystery game revolves around a series of police interview footages featuring a woman Hannah talking about her missing husband Simon. Players must sift through the database of video clips, using exact keyword searches to unlock the mystery.
+                </p>
+                <figure class="figure-container">
+                    <img class="img-responsive" src="img/Her_Story_Demo.png" alt="Graphic Interface of Her Story" style="width: 70%; margin-left: auto; margin-right: auto;">
+                    <figcaption>Within the game, the player can search any word and the database returns all clips in which the speaker uses that word.<br> If more than five entries are found, then the player can only watch the first five.</figcaption>
+                </figure>
+                <h6>Defining Goals</h6>
+                <p>
+                    <em>Her Story</em> is a unique video game whose primary objective is vague compared to most conventional games. Instead of a clear end goal, the game mechanics are such that it concludes when a 'chitchat' button becomes visible and is clicked by the player. This button appears after the player views a certain set of videos, although the specifics of which videos trigger this are unknown. Upon clicking, the chitchat queries if the player understands the events that have unfolded; if the player responds affirmatively, the ending credits roll. <span class="line-spacing"></span><br>
+                    This mechanism, however, allows for the game to be concluded even without the player truly deciphering the unfolding narrative. It thereby subtly encourages the player to only consider the game complete when they are personally satisfied with their understanding of the events. Consequently, the hidden objective of Her Story can be interpreted as comprehending the unfolding narrative, as subjective an endeavor as that might be. <span class="line-spacing"></span><br>
+                    Therefore, an effective and capable agent should be able to achieve the following <b>end conditions</b>:
+                </p>
+                <ol>
+                  <li>The agent can efficiently navigate through the game so that the chitchat button appears</li>
+                  <li>The agent can understand what happened based on its observations of the game</li>
+                </ol>
+                <p>
+                    While the first condition is concrete, the second condition is necessarily subjective as the design of the game allows room for interpretation. Thus, we ask the agent to write a conclusive analysis after the first end condition is triggered to obtain its understanding of the mystery.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3 pt-1">
+            <div class="col-md-8 mx-auto">
+                <h4>Solving Her Story with Sherlock</h4>
+                <p>
+                    ################Show clips or screenshots of interesting moments. 여기는 하이라이트 모음!!! 여기에 해설을 적으시오.############
+                    <span class="line-spacing"></span><br>
+
+
+                    In the context of ongoing research and evaluation, our current work on Sherlock presents an array of future prospects. As of now, we have not publicly released the full gameplay recordings of Sherlock due to potential copyright issues, instead choosing to share select highlights. Our methodology, however, remains reproducible with the use of the prompts we have outlined for GPT-4.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3 pt-1">
+            <div class="col-md-8 mx-auto">
+                <h4>So How Does It Work?</h4>
+                <p>
+                    Creating an AI agent capable of solving Her Story involves two primary components.
+                </p>
+                <ul>
+                  <li>The first component is responsible for translating game environment observations into text and converting text outputs into in-game actions (navy modules in the diagram below).</li>
+                  <li>The second component, what we can refer to as the 'brain', is an LLM-powered agent, Sherlock, which determines the subsequent course of action (red modules in the diagram below).</li>
+                </ul>
+                <figure>
+                    <img class="img-responsive" src="img/model_pipeline.png" alt="Model pipeline employing GPT-4">
+                    <figcaption>Overview of how the Her Story game environment and Sherlock interact.</figcaption>
+                </figure>
+                <h6>"Textifying" Her Story for Interaction</h6>
+                <p>
+                    The first component functions by <em>textifying</em> the game. Essentially, we transform Her Story, a video game, into a text-based game. For 'search' actions, the game provides a list of video clips along with information about which videos have already been viewed. We transcribe this information into text, employing consistent language, and include an appended list labeled 'Unwatched video index', as demonstrated in the accompanying figure below. 'Play video' actions, where the game plays the chosen clip to the player, are also textified. Any visual or auditory information is translated into text, with speech transcriptions and descriptions of the speaker's visual characteristics. Lastly, any commands that Sherlock produces, be it 'search' or 'play', are detected and executed within the actual game.
+                </p>
+                <figure>
+                    <img class="img-responsive" src="img/prospective_example.png" alt="Input and output examples">
+                    <figcaption>Inputs and outputs of the Prospective module. There are two possible commands, search and play,<br> which are translated into their actual corresponding actions in the game.</figcaption>
+                </figure>
+                <h6>Prospective Module</h6>
+                <p>
+                    Sherlock, the second component in our work, comprises two modules: the Prospective module and the Retrospective module. The Prospective module takes text-based observations as input and generates a command as output. This process follows a structured reasoning framework which is demonstrated in the system's prompt of GPT-4. The framework consists of three steps: (1) abductive reasoning, (2) search keyword planning, and (3) decision making for the next command. Read the system's prompt below.
+                </p>
+                <figure>
+                    <img class="img-responsive" src="img/prospective.png" alt="Prospective module and prompt">
+                    <figcaption>System prompt for Sherlock. User always corresponds to the game environment observation, while Assistant represents Sherlock reasoning and navigating the game. [__KEYWORDS__] is replaced with the search history, and [__SUMMARY__] is replaced with the Retrospective module's newest running summary.</figcaption>
+                </figure>
+                <h6>Retrospective Module</h6>
+                <p>
+                    However, utilizing only the Prospective module is insufficient, as the agent tends to repeat meaningless searches and struggles with short-term memory limitations. We thus introduce the Retrospective module. This module reflects on the agent's recent thoughts and actions, creating a running summary of important findings. Employed every 6 turns, it provides Sherlock with a long-term game-playing memory. As a result, the newest memory replaces the older one in the Prospective module's system prompt, ensuring that Sherlock's decisions are continually informed by the most up-to-date and relevant information.
+                </p>
+                <figure>
+                    <img class="img-responsive" src="img/retrospective.png" alt="Retrospective module and prompt">
+                    <figcaption>Prompt (user) for Retrospective module. Given recent dialogue history and old summary in the system prompt, <br>the user prompt queries Sherlock to highlight any significant discoveries.</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="row mb-3 pt-1">
+            <div class="col-md-8 mx-auto">
+                <h4>Why Simpler Approaches Fail</h4>
+                <p>
+                    The implementation of long-term memory in our system, as seen in the system prompt, takes on two distinct forms. The first is a relatively simple form - the <b>search history</b>, denoted as <em>[__KEYWORDS__]</em>. This feature is designed to mirror the in-game function that allows the player to scroll through their search history. The second, more complex form is the <b>running summary</b>, which compiles the most relevant information to solve the mystery every few turns.<span class="line-spacing"></span><br>
+
+                    Without the search history, the agent is prone to repeated use of the same keywords. Despite explicit instructions to avoid such repetition, the agent often retraced a previous sequence of keywords. However, relying solely on the search history is insufficient. The running memory serves not just as a repository for important factual information, but also as a record of the rationale behind the agent's past search decisions. In its absence, we noticed that the agent often ends up reiterating the same line of inquiry with different keywords.<span class="line-spacing"></span><br>
+
+                    We conducted experiments using GPT-4 with 8k context-length. Since the total length of all monologues is roughly ~18k tokens, it may be possible to solve the game without an explicit memory system using GPT-4 with 32k context-length. However, this approach would likely be inefficient both in terms of inference and cost. Moreover, given the importance of a coherent reasoning trace, including the agent's chain-of-thoughts could potentially exceed a 32k token length. To facilitate efficient exploration and comprehensive reasoning, some form of context restructuring is necessary, which would involve the removal of superfluous information. Therefore, our approach demonstrated in the Prospective and Retrospective modules provides a more balanced and effective solution.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-8 mx-auto">
+                <h4>LLM-powered Game Agents</h4>
+                <p>
+                    The rising capabilities of LLMs have fueled a surge of interest in their application within game-playing AI agents. While there have been numerous attempts to incorporate LLMs into RL algorithms, only recently has there been efforts to explore <b>no-RL, no-gradient</b> approaches that utilize LLMs without any additional training.<span class="line-spacing"></span><br>
+
+                    Two concurrent works have focused on the game of Minecraft. <a href="https://arxiv.org/abs/2305.15486">SPRING (Wu et al., 2023)</a>'s approach demonstrated that a strategically designed agent, powered by LLMs, could outperform existing RL-based solutions on the Crafter benchmark, which is derived from Minecraft. Likewise, <a href="https://voyager.minedojo.org/">Voyager (Wang et al., 2023)</a>, with its intricate designs of LLM modules for planning and action execution, showed a dramatic improvement in efficiency for tech tree mastery and generalization to unseen tasks.
+                </p>
+                <h6>What skills are required for Her Story vs. Minecraft?</h6>
+                <p>
+                    Her Story and Minecraft represent two distinct facets of the gaming world, each requiring a unique set of skills and approaches. Her Story is a non-linear, narrative-driven game where the primary objective remains vague, and success is often subjective, hinging upon the player's understanding of the complex unfolding mystery. On the other hand, Minecraft offers an open-ended environment, where the player can interact with a mutable world, construct complex structures, and devise survival strategies.<span class="line-spacing"></span><br>
+
+                    As such, Her Story demands a high degree of deductive reasoning, inferential thinking, and an ability to synthesize information from incoherent sources, whereas Minecraft requires spatial understanding, resource management, and strategic planning.
+                    In both cases, traditional RL approaches may struggle due to the lack of distinct reward functions and necessarily long-horizon tasks. Moreover, Her Story's ambiguity and narrative complexity present a different set of challenges compared to Minecraft's open-ended environment.
+                    So while it might be tempting to view one game as inherently more challenging than the other, such a comparison may be reductive, given the distinct skill sets each one demands.
+                </p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-8 mx-auto">
+                <h4>Future Direction</h4>
+                <p>
+                    To properly evaluate Sherlock, there are a few caveats and future work we must consider.
+                </p>
+                <h6>On Textification (spoiler alert!)</h6>
+                <p>
+                    It is inevitable that tranferring information from one modality (visual) to another (text) results in information loss. The process of "textifying" Her Story introduces an intriguing conundrum pertaining to the characterization of the woman appearing in the video clips. In the original game, players encounter the same woman across different footages, leading them, quite reasonably, to initially assume that all footages feature the same individual. A critical juncture in the game is the potential realization that there might be two women featured in the interviews - an interpretation that remains inherently ambiguous.<span class="line-spacing"></span><br>
+
+                    When translating the visual game into a text-based version, our descriptive approach is somewhat limited in its ability to convey this subtle narrative design. The visual descriptions of the woman in each video merely identify her as "a woman", without further distinguishing characteristics. Considering that there are seven distinct sessions of videos, with each session featuring the woman in a different outfit, it is plausible for the AI agent to interpret these as seven separate individuals.
+                </p>
+                <figure class="figure-container">
+                    <img class="img-responsive" src="img/textification.png" alt="Textification example" style="width: 80%; margin-left: auto; margin-right: auto;">
+                    <figcaption>An example of textification.</figcaption>
+                </figure>
+                <p>
+                    The implications of this on the game's difficulty remain unclear. On one hand, it might simplify the game since Sherlock does not initially fall into the trap of assuming all videos feature the same person. On the other hand, it could potentially increase the challenge as Sherlock is now tasked with determining which among the seven individuals are the same person. Furthermore, there are instances where the woman in the session does not explicitly identify herself. We mention this caveat as there may be a difference in gameplay between Sherlock and a real human player.
+                </p>
+                <h6>On Contamination</h6>
+                <p>
+                    A potential limitation of this work relates to the issue of test set contamination and information leakage, given that the game Her Story was released in 2015, six years prior to the knowledge cutoff of GPT-4 in 2021. It is conceivable that GPT-4 might have been exposed to some level of information about Her Story during its training phase, such as narrative details, plot interpretations, or gaming strategies culled from various online sources.<span class="line-spacing"></span><br>
+
+                    However, we emphasize that a familiarity with Her Story, even a thorough understanding of its narrative intricacies, <b>does not equate</b> to the ability to play the game effectively. The gameplay demands not only the interpretation of the narrative but also the strategic implementation of responsive actions within the game environment. The decision-making processes required for successful navigation of the game go beyond mere knowledge of the plot and require the application of reasoning skills.<span class="line-spacing"></span><br>
+
+                    Furthermore, we have observed that <a href="https://chat.openai.com/share/613a106a-454d-4c9f-874c-7c82ffa61137">GPT-4 was not able to autocomplete transcripts</a> from the game, as done in <a href="https://arxiv.org/abs/2305.00118">Chang et al. (2023)</a>, suggesting that it did not memorize the game's content, even if it might have been exposed to broad thematic or narrative elements of Her Story during its training, such as Wikipedia. This lends credibility to the assertion that the game-solving abilities demonstrated by the AI are driven by its inferential and decision-making capabilities, rather than any pre-existing knowledge of the game. Nonetheless, the extent of influence of pre-training exposure to the game's content should be investigated.
+                </p>
+                <h6>On Evaluation</h6>
+                <p>
+                    Future work involves the development of more robust evaluation metrics and benchmarks for assessing various approaches to playing Her Story. Given the game's inherent open-endedness, it might be appropriate to consider customizable end goals.
+                </p>
+                <ol>
+                    <li>One proposed evaluation strategy involves quantifying the number of search and play actions  the agent needs to perform to access a particular proportion of the video content (for instance, 90%). This metric could offer a measure of how efficiently the agent navigates the game environment in relation to the sparse clues dispersed throughout the gameplay (aligned with end condition #1).</li>
+                    <li>Another metric could involve generating a set of questions that yield clear, unambiguous answers about the underlying plot of Her Story. Evaluating the agent's ability to answer these questions accurately would provide insight into the agent's holistic understanding of the narrative (aligned with end condition #2).</li>
+                    <li>It would be valuable to compare the performance of Sherlock with that of the "average" human player. While play time for humans reportedly ranges between 2-7 hours, quantifying Sherlock's performance in relation to the human average could offer a meaningful benchmark.</li>
+                </ol>
+                <p>Most crucially, establishing a more accessible and efficient testbed for conducting experiments is needed, allowing for more trials for statistical accuracy. These evaluation methods would pave the way for more nuanced understandings of AI capabilities in complex, narrative-driven gaming environments.</p>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-md-8 mx-auto">
+                <h4>Conclusion</h4>
+                <p>
+                    One of the primary advantages of using LLMs in game AI development is the ability to bypass some of the challenges commonly associated with RL. These include intricate reward design, a high training cost, and the difficulty of providing sufficiently diverse training environments. LLMs offer a rich understanding of the world, an asset that would be underutilized if not harnessed.<span class="line-spacing"></span><br>
+
+                    Our work extends this nascent line of research, demonstrating the potential of LLMs in challenging games like Her Story, where RL appraoches are challenging due to its artfully vague objective and narrative-driven game design. Thus, we contribute to the growing body of evidence that underscores the versatility and value of large language models in the evolving landscape of game-playing AI.
+                </p>
+
+            </div>
+        </div>
+        <!-- <div class="row mb-4">
+            <div class="col-md-8 mx-auto">
+                <h4 class="mb-3">Citation</h4>
+                <p>
+                    Please reach out to jongho {dot} park {at} krafton {dot} com for any questions or feedback. 
+                </p>
+                <textarea id="bibtex" class="form-control" readonly>
+@misc{sherlock2023,
+      title={SHERLOCK: Unlocking Mysteries in Her Story using GPT-4},
+      url = {https://github.com/krafton-ai},
+      author={Krafton},
+      month = {June},
+      year={2023},
+}</textarea>
+            </div>
+        </div> -->
+        <div class="row mb-3">
+            <div class="col-md-8 mx-auto">
+                <h4>Acknowledgements</h4>
+                <p class="text-justify">
+                    This website is in part based on a template of <a href="http://mgharbi.com/">Micha&euml;l Gharbi</a>, also used in <a href="https://alexyu.net/pixelnerf">PixelNeRF</a>, <a href="https://alexyu.net/plenoctrees">PlenOctrees</a>, and <a href="https://alexyu.net/plenoxels/">Plenoxels</a>.
+                </p>
+            </div>
+        </div>
+    </div> <!-- container -->
+    <script>
+        window.mobileAndTabletCheck = function() {
+            let check = false;
+            (function(a) {
+                if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+            })(navigator.userAgent || navigator.vendor || window.opera);
+            return check;
+        };
+
+        if (window.location.host.indexOf('alexyu.net') > -1 && window.location.protocol != "https:") {
+            // Force HTTPS
+            window.location.protocol = "https";
+        }
+
+
+        if (mobileAndTabletCheck()) {
+            document.getElementById('demo-warning').style.display = 'block';
+            document.getElementById('demo-container').style.display = 'none';
+            document.getElementById('demo-warning').innerHTML = "Unfortunately, mobile and tablet devices are not currently supported due to WebGL compatibility issues. We hope to support this in the future.";
+        } else {
+            var canvas = document.createElement('canvas');
+            var gl = canvas.getContext('webgl');
+            var tex_limit = gl.getParameter(gl.MAX_TEXTURE_SIZE);
+            if (gl && gl instanceof WebGLRenderingContext) {
+                const REQUIRED_TEX_LIMIT = 8192;
+                if (tex_limit < REQUIRED_TEX_LIMIT) {
+                    document.getElementById('demo-warning').style.display = 'block';
+                    document.getElementById('demo-container').style.display = 'none';
+                    document.getElementById('demo-warning').innerHTML = "Your GPU's maximum texture size is: " + tex_limit + " which is less than the minimum required (" + REQUIRED_TEX_LIMIT + ").  Please try another device, if possible.";
+                }
+            } else {
+                document.getElementById('demo-warning').style.display = 'block';
+                document.getElementById('demo-container').style.display = 'none';
+                document.getElementById('demo-warning').innerHTML = "Your browser does not support WebGL, or WebGL was disabled. Please use a modern browser like Chrome or Firefox.";
+            }
+        }
+    </script>
+</body>
