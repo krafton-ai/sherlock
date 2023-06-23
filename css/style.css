@@ -13,6 +13,10 @@ small {
     font-weight: 700;
 }
 
+figcaption {
+    margin-bottom: 20px; /* Add a margin to the bottom of the figcaption. Adjust the pixel value to your preference */
+}
+
 p,
 h6,
 .form-control,
@@ -165,6 +169,17 @@ figcaption {
   margin-top: -15px; /* Adjust the value as needed */
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.video-container video {
+    max-width: 100%; /* This will make the video responsive, i.e., its width will be 100% of its container */
+    height: auto; /* This will keep the aspect ratio of the video while resizing */
+}
 @media only screen and (max-width: 992px) {
     #teaser-one .row>div>.row {
         padding: 0 55px

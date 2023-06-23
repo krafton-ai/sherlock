@@ -130,7 +130,7 @@
                             Paper
                         </a> -->
                     <li class="nav-item text-center">
-                        <a href="https://github.com/sxyu/svox2" class="nav-link">
+                        <a href="https://github.com/krafton-ai/sherlock" class="nav-link">
                             <svg style="width:48px;height:48px" viewBox="0 0 65 65">
                                 <path fill="currentColor" d="M32 0a32.021 32.021 0 0 0-10.1 62.4c1.6.3 2.2-.7 2.2-1.5v-6c-8.9 1.9-10.8-3.8-10.8-3.8-1.5-3.7-3.6-4.7-3.6-4.7-2.9-2 .2-1.9.2-1.9 3.2.2 4.9 3.3 4.9 3.3 2.9 4.9 7.5 3.5 9.3 2.7a6.93 6.93 0 0 1 2-4.3c-7.1-.8-14.6-3.6-14.6-15.8a12.27 12.27 0 0 1 3.3-8.6 11.965 11.965 0 0 1 .3-8.5s2.7-.9 8.8 3.3a30.873 30.873 0 0 1 8-1.1 30.292 30.292 0 0 1 8 1.1c6.1-4.1 8.8-3.3 8.8-3.3a11.965 11.965 0 0 1 .3 8.5 12.1 12.1 0 0 1 3.3 8.6c0 12.3-7.5 15-14.6 15.8a7.746 7.746 0 0 1 2.2 5.9v8.8c0 .9.6 1.8 2.2 1.5A32.021 32.021 0 0 0 32 0z" />
                             </svg>
@@ -148,8 +148,8 @@
                 <!--<div class="embed-responsive embed-responsive-16by9 pb-3">
                     <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/n31K7Kv36B4" frameborder="0" allow="accelerometer; autoplay muted; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>-->
-				<div style="text-align: center;">
-					<video src="video/test.mp4" controls> </video>
+				<div class="video-container">
+					<video src="video/full_final.mp4" controls> </video>
 				</div>
                 <p class="text-justify mt-2 pt-3">
                     Requiring strong logical deduction skills and long-term planning for each subsequent action, Her Story poses unique challenges for an AI. The game's ambiguous final goal contributes to its complexity; we define one version of "solving" the game as triggering the chit-chat icon, which grants access to the end sequence. Sherlock successfully navigates these challenges and solves Her Story within 204 actions, where each action corresponds to either a 'search keyword' command or a 'play video' command. 
@@ -186,12 +186,48 @@
         </div>
         <div class="row mb-3 pt-1">
             <div class="col-md-8 mx-auto">
-                <h4>Solving Her Story with Sherlock</h4>
+                <h4>Solving Her Story with Sherlock (spoiler alert!)</h4>
                 <p>
-                    ################Show clips or screenshots of interesting moments. 여기는 하이라이트 모음!!! 여기에 해설을 적으시오.############
+                    <h6>The Rise of Sherlock</h6>
+                    <div class="video-container">
+                        <video src="video/intro.mp4" controls> </video>
+                    </div>
+                    <p> 
+                        Sherlock (at the bottom right of the video) is an AI YouTube streamer who is set up to walk you through the process of solving a mystery game in a friendly manner. Sherlock's appearance is generated using Midjourney and Stable Diffusion, and able to speak in own voice using English TTS with British pronunciation and a 2D lip-sync model. 
+                    </p>
+                    <h6>Facing a murder</h6>
+                    <div class="video-container">
+                        <video src="video/highlight_1.mp4" controls> </video>
+                    </div>
+                        <p> With the word MUDER, Sherlock realizes the game is about murder case investigation, and immediately comes up with the words 'victim' and 'suspect' which are highly related. The first video is searched from keyword 'suspect', after Sherlock watches a video, the database is checked. </p>
+                    <h6>Catching Lies</h6>
+                    <div class="video-container">
+                        <video src="video/highlight_2.mp4" controls> </video>
+                    </div>
+                        <p> 
+                            Sometimes, characters lie. But Sherlock recognizes when they're lying and doubts their words.
+                             <br> [1] along with the videos related to 'lie', form the woman's last words ("My name? That was the only question I failed.") Sherlock catches hidden implication about the lie detector result and extracts the next search keyword 'name'. 
+                             <br> [2] Consecutively, with in the videos related to 'name', when a woman says her name is Hannah during a lie detector test and then immediately apologizes ("Yes. My name is Hannah smith. Oh, Shit. Sorry."), Sherlock realizes that she is hiding her identity. Through this set of circumstances, Sherlock infer as "This could imply that she might be hiding something or feels guilty about revealing her true identity. This information raises more questions about her involvement in the case and whether she is being truthful about other aspects of her story." </p>
+                    <h6> Getting closer to the truth.</h6>
+                    <div class="video-container">
+                        <video src="video/highlight_3.mp4" controls> </video>
+                    </div>
+                        <p> [1] Sherlock's keyword inference is divided into two cases. In the absence of significant footage, Sherlock searches for generalized keywords related to crime or human psychology. However, after watching meaningful footage, Sherlock identifies keywords that are specific to the case - for example, 'diary', 'real mother', 'rules' etc. 
+                            <br>[2] Meanwhile, Sherlock's gradual reasoning about the two women with identical appearances is impressive. After noticing that the woman in the white blouse repeats her name several times, Sherlock vaguely mentions her name as Hannah/Eve. Sherlock then deduces that they might be twins, and thinks that this clue could change the perspective of the case. (Sherlock says, "the woman in a long-sleeved white blouse with her hair down reveals that her mother called her Eve. This information suggests that she might be Hannah's twin sister, as they were born at the same time and had separate names. This revelation could potentially change our understanding of the relationships between the individuals involved in the case." ) Eventually, after viewing all of the footage related to 'Hannah', 'Eve', and 'twin', Sherlock identifies the woman in the white blouse as Eve, which can be found in the final history summary. </p>
+                    
+                    <h6> Collect all the information </h6>
+                    <div class="video-container">
+                        <video src="video/highlight_4.mp4" controls> </video>
+                    </div>
+                        <p> As Sherlock searched for keywords, she gathered information about the people involved in the murder, piece by piece, until finally got all the important information about the murder (and the evidence and truth behind it). This is stored in the final history summary, categorized as Helpful keywords, Key individuals, and Timeline. This is a crucial hint for Sherlock's final deduction. </p>
+                    
+                    <h6> Sherlock's Reasoning</h6>
+                    <div class="video-container">
+                        <video src="video/highlight_5.mp4" controls> </video>
+                    </div>
+                        <p> Sherlock makes sense of all 204 fragmented videos and explains the complex truths that has been uncovered.</p>
+                    
                     <span class="line-spacing"></span><br>
-
-
                     In the context of ongoing research and evaluation, our current work on Sherlock presents an array of future prospects. As of now, we have not publicly released the full gameplay recordings of Sherlock due to potential copyright issues, instead choosing to share select highlights. Our methodology, however, remains reproducible with the use of the prompts we have outlined for GPT-4.
                 </p>
             </div>
@@ -272,7 +308,7 @@
                 <p>
                     To properly evaluate Sherlock, there are a few caveats and future work we must consider.
                 </p>
-                <h6>On Textification (spoiler alert!)</h6>
+                <h6>On Textification</h6>
                 <p>
                     It is inevitable that tranferring information from one modality (visual) to another (text) results in information loss. The process of "textifying" Her Story introduces an intriguing conundrum pertaining to the characterization of the woman appearing in the video clips. In the original game, players encounter the same woman across different footages, leading them, quite reasonably, to initially assume that all footages feature the same individual. A critical juncture in the game is the potential realization that there might be two women featured in the interviews - an interpretation that remains inherently ambiguous.<span class="line-spacing"></span><br>
 
